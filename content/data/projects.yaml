@@ -1,0 +1,53 @@
+- name: LoLVRSpectate
+  language: Python
+  link: https://github.com/Fire-Proof/LoLVRSpectate
+  tools:
+    - OpenVR
+    - PySide (PyQT)
+    - Memorpy
+  description: >
+    Using the OpenVR python library, this program allows you to spectate a match in the MOBA game League of Legends.
+    This is achieved by reading VR-headset sensor data, transforming it, and editing the camera location directly in
+    the game-clients memory
+  highlighted: true
+
+- name: AudiobookShelf
+  language: TypeScript
+  link: https://github.com/Fire-Proof/AudiobookShelf
+  tools:
+    - express
+  description: >
+    This projects dynamically generates podcast rss-feeds based on folder tree containing audio-files. This allows
+    podcast-apps, such as pocketcast, to easily access and stream a library full of audiobooks
+
+- name: cue-csgo
+  language: Python
+  link: https://github.com/Fire-Proof/cue-csgo
+  tools:
+    - Flask
+    - PySide (PyQT)
+  description: >
+    Integrates Counter-Strike: Global Offensive with Corsair's RGB keyboards, via CS:GO's build-in Game State Integration
+    (webhook). The keyboard integration is done with a custom library, which wraps Corsair's C SDK
+
+- name: Pay2Ban
+  language: Python
+  link: https://github.com/Fire-Proof/UNRELEASED
+  tools:
+    - Flask
+    - SQLAlchemy
+  description: >
+    Trying to profit of the malice of my friends, I create a quick webapp, which allows them to create an account,
+    where they can transfer credits onto. These credits allows them to either ban, kick or mute people on the VOIP
+    service TeamSpeak 3
+  highlighted : true
+
+- name: Portfolio Site
+  language: JavaScript
+  link: https://github.com/Fire-Proof/UNRELEASED
+  tools:
+    - Gatsby
+    - React
+  description: >
+    By using Gatsby, I host this portfolio website for free on Github-Pages
+  highlighted: true

@@ -1,48 +1,45 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
-import Img from 'gatsby-image';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 import colors from '../constants/color';
+import HeaderLogo from '../atoms/HeaderLogo';
+import HeaderMenuElement from '../atoms/HeaderMenuElement';
+import { withTheme } from '../utils/contexts/ThemeContext';
 
-const Container = styled.header`
+const Container = styled.nav`
   display: flex;
   align-items: center;
-  background-color: ${colors.darkBackground};
-  padding: 1em;
+  background-color: ${colors.header.background};
+  transition: background-color ease 0.2s, filter ease 0.5s;
+  ${props =>
+    props.transparent &&
+    css`
+      box-shadow: none !important;
+      background-color: transparent;
+    `}
 `;
 
-const Logo = styled(Img)`
-  width: 2em;
-  height: 5em;
-`;
-
-const query = graphql`
-  query {
-    logoImage: file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 96) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
-
-const Header = () => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <Container>
-        <Link to="/">
-          <Logo fixed={data.logoImage.childImageSharp.fluid} />
-        </Link>
-      </Container>
-    )}
-  />
-);
-
-Header.defaultProps = {
-  siteTitle: '',
+const Header = ({ className, isMuted }) => {
+  return (
+    <Container transparent={isMuted} className={className}>
+      <Link to="/">
+        <HeaderLogo />
+      </Link>
+      <HeaderMenuElement name="Home" link="/" active />
+      <HeaderMenuElement name="Projects" link="/projects" />
+      <HeaderMenuElement name="Blog" link="/blog" />
+    </Container>
+  );
 };
 
-export default Header;
+Header.propTypes = {
+  className: PropTypes.string,
+  isMuted: PropTypes.bool.isRequired,
+};
+
+Header.defaultProps = {
+  className: '',
+};
+
+export default withTheme(Header);

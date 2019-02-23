@@ -44,7 +44,7 @@
 
 - name: Portfolio Site
   language: JavaScript
-  link: https://github.com/Fire-Proof/UNRELEASED
+  link: https://github.com/Fire-Proof/portfolio
   tools:
     - Gatsby
     - React

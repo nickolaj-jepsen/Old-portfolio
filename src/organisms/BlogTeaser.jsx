@@ -34,13 +34,13 @@ const ReadTime = styled.small`
 `;
 
 const BlogPost = styled.div`
-  width: calc(100% - 7em);
+  width: calc(100% - 14em);
   max-width: 50em;
   background-color: ${colors.backgroundLight};
   border-radius: 2px;
   box-shadow: ${shadow.z2};
   border: ${colors.background} solid 1px;
-  margin: 1em 1em 1em 6em;
+  margin: 1em 1em 1em 1em;
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 800px) {

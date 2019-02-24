@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Nickolajs website`,
-        short_name: `starter`,
+        short_name: `Nickolaj`,
         start_url: `/`,
         background_color: `#222831`,
         theme_color: `#222831`,
@@ -80,6 +80,13 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-44509395-7',
+        anonymize: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

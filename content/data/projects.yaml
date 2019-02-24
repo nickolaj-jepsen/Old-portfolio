@@ -32,10 +32,11 @@
 
 - name: Pay2Ban
   language: Python
-  link: https://github.com/Fire-Proof/UNRELEASED
+  link: https://github.com/Fire-Proof/Pay2Ban
   tools:
     - Flask
     - SQLAlchemy
+    - Bootstrap
   description: >
     Trying to profit of the malice of my friends, I create a quick webapp, which allows them to create an account,
     where they can transfer credits onto. These credits allows them to either ban, kick or mute people on the VOIP

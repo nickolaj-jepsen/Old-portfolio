@@ -50,5 +50,5 @@
     - Gatsby
     - React
   description: >
-    By using Gatsby, I host this portfolio website for free on Github-Pages
+    The code running THIS WEBSITE. Build with Gatsby.js, which generates a static site, that is hosted on netlify.
   highlighted: true

@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
   html {
   overflow-y: visible;
   overflow-x: hidden;
+  scrollbar-width: auto;
+  scrollbar-color: ${colors.backgroundLight} ${colors.backgroundDark};
   }
   body, html {
     height: 100%;

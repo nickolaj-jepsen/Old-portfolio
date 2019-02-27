@@ -111,8 +111,8 @@ const query = graphql`
     }
     desktop: file(relativePath: { eq: "background.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 4640) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(quality: 90, maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

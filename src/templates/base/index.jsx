@@ -70,15 +70,12 @@ const Header = styled(HeaderComponent)`
 
 const Gutter = styled(GutterComponent)`
   grid-area: gutter;
-  z-index: 2;
   box-shadow: ${shadow.z2};
 `;
 
 const Main = styled.main`
   grid-area: content;
-  z-index: 10;
   margin-bottom: 2em;
-
   @media only screen and (max-width: 800px) {
     margin: 0 1em;
   }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   FaFacebookSquare,
   FaGithubSquare,
-  FaEnvelope,
+  FaEnvelopeSquare,
   FaLinkedin,
 } from 'react-icons/fa';
 import colors from '../constants/color';
@@ -26,26 +26,21 @@ const SocialContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   z-index: 10;
-`;
-
-const Entry = styled.span`
-  color: ${colors.primary};
-  transition: text-shadow 0.5s ease, color 0.2s ease;
+  width: 100%;
+  max-width: 10em;
 `;
 
 const Link = styled.a`
-  display: flex;
-  margin-bottom: 0.5rem;
   font-size: 1.5em;
   color: ${colors.foregroundFaded};
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  transition: text-shadow 0.5s ease, color 0.2s ease;
+
   &:hover {
-    ${Entry} {
-      color: ${colors.primaryLight};
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
+    color: ${colors.foreground};
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -61,16 +56,16 @@ const Copyright = styled.p`
 const Gutter = ({ className }) => (
   <Wrapper className={className}>
     <SocialContainer>
+      <Link href="mailto:nickolaj1177@gmail.com">
+        <FaEnvelopeSquare />
+      </Link>
       <Link href="https://github.com/fire-proof">
         <FaGithubSquare />
-      </Link>
-      <Link href="mailto:nickolaj1177@gmail.com">
-        <FaEnvelope />
       </Link>
       <Link href="https://www.facebook.com/nickolaj1177">
         <FaFacebookSquare />
       </Link>
-      <Link href="https://www.linkedin.com/in/nickolaj-jepsen-a968aba3/">
+      <Link href="https://www.linkedin.com/in/nickolaj-jepsen/">
         <FaLinkedin />
       </Link>
     </SocialContainer>

@@ -6,11 +6,12 @@
 
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
-exports.createPages = ({ graphql, actions }) => {
+const createBlog = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
+  const blogPost = path.resolve(`./src/templates/BlogPost.jsx`);
   return graphql(
     `
       {
@@ -45,7 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
-      const blogPath = `blog/${post.node.frontmatter.date}/${
+      const blogPath = `blog/${post.node.frontmatter.side}/${
         post.node.frontmatter.slug
       }`;
 
@@ -62,6 +63,46 @@ exports.createPages = ({ graphql, actions }) => {
   });
 };
 
+const createResume = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const resumeTemplate = path.resolve(`./src/templates/Resume.jsx`);
+  return graphql(
+    `
+      {
+        allResumeYaml {
+          edges {
+            node {
+              meta {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors;
+    }
+    const resumes = result.data.allResumeYaml.edges;
+
+    resumes.forEach(resume => {
+      createPage({
+        path: `resume/${resume.node.meta.slug}/`,
+        component: resumeTemplate,
+        context: {
+          slug: resume.node.meta.slug,
+        },
+      });
+    });
+  });
+};
+
+exports.createPages = data => {
+  return Promise.all([createBlog(data), createResume(data)]);
+};
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -73,4 +114,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new MonacoWebpackPlugin({
+        // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+        languages: ['yaml'],
+      }),
+    ],
+  });
 };

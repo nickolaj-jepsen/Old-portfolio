@@ -1,0 +1,147 @@
+meta:
+  slug: danish
+i18n:
+  personal: Personligt
+  education: Uddannelse
+  experience: Erfaring
+  project: Projekter
+  reference: Referencer
+  skills: Færdigheder
+  programming_languages: Programmerings sprog
+  frameworks: Frameworks
+  tools: Værktøjer
+  about: Om mig
+  not_graduated: ikke dimitteret
+personal:
+  name: Nickolaj Jepsen
+  role: Datamatiker
+  address: Grenåvej 681c lej. 21, 8541 Skødstrup
+  phone: (+45) 23311839
+  email: nickolaj1177@gmail.com
+  homepage: nickolaj.com
+  github: fire-proof
+  linkedin: nickolaj-jepsen
+  about: >
+    Entusiastisk full-stack webudvikler, som brænder for finde og løse problemer.
+
+    Lærenem og nyder at lære om nye frameworks, værktøjer og programmeringssprog
+
+    Har erfaring med agilt udvikling, og arbejder effektivt i hold
+education:
+  - name: Herningsholm
+    education: HTX (Science/IT)
+    location: Herning
+    date:
+      from: Aug. 2012
+      to: Jun. 2015
+    graduated: true
+  - name: Aarhus Universitet
+    education: Datalog
+    location: Aarhus
+    date:
+      from: Aug. 2015
+      to: Jun. 2016
+    graduated: false
+  - name: Erhvervsakademiet Aarhus
+    education: Datamatiker
+    location: Aarhus
+    date:
+      from: Aug. 2016
+      to: Jan. 2019
+    graduated: true
+experience:
+  - name: Karup Kølvrå Idrætsklub
+    role: Frivillig
+    location: Karup
+    date:
+      from: Aug. 2014
+      to: Nu
+    highlights:
+      - Implementeret en hjemmeside samt API i Python frameworket Flask, der indsamler kamp resultater for lokale hold
+        fra diverse sports portaler(DBU,DGI, etc.).
+      - Hjulpet med netværk samt opsætning af servere til klubbens halvårlige LAN Party.
+  - name: Elgiganten
+    role: Ungarbejder
+    location: Herning
+    date:
+      from: Sep. 2012
+      to: Dec. 2014
+    highlights:
+      - Hjulpet kunder med opsætning af computer og tablets.
+  - name: Digital Revisor
+    role: Praktikant
+    location: Aarhus
+    date:
+      from: Aug. 2018
+      to: Okt. 2018
+    highlights:
+      - Del af et team der udviklede digital selvbetjening til firmaers årsrapport/årsregnskab.
+      - Hjulpet med udvikling af et lovgivnings-modelleringsværktøj, der giver en revisor mulighed for at udvikle
+        selvbetjenings-værktøjer uden erfaring med kodning.
+      - Arbejdede med micro-services skrevet i javascript samt Go.
+      - Involveret i DevOps mht. docker, kubernetes og konfiguration GitLab CI/CD.
+  - name: Digital Revisor
+    role: Udvikler
+    location: Aarhus
+    date:
+      from: Jan. 2019
+      to: Feb. 2019
+    highlights:
+      - En tidsbegrænset ansættelse for at hjælpe med at færdigøre digital selvetjenings værktøj.
+projects:
+  - name: Redskabstyring
+    role: Udvikler
+    client: DGI Østjylland
+    link: ~
+    highlights:
+      - Udviklede en hjemmeside i samarbejde med DGI Østjylland til redskabs håndterings for deres gymnastik afdeling.
+      - Haft nær kundekontakt for at løse deres specifikke problemstilling.
+      - Har brugt TDD, samt CI for at sikre mindst mulig fejl.
+      - Udviklet med Node.js, Express og MongoDB.
+  - name: LoLVRSpectate
+    role: Hovedudvikle
+    client: ~
+    link: /fire-proof/LoLVRSpectate
+    highlights:
+      - Udviklede et værktøj til at tilføje uofficiel VR support til spillet League of Legends.
+      - Udviklet med Python, samt VR framework OpenVR til at spore bevægelserne fra VR headsettet.
+  - name: Digital Signature
+    role: Hovedudvikle
+    client: Digital Revisor
+    link: ~
+    highlights:
+      - Udviklede en micro-service i samarbejde med Digital Revisor, der håndterede forbindelsen til digital-signatur servicen Penneo.
+      - Brugt agil metodik i form at scrum til at løbende tilpasse produktet til brugernes krav.
+      - Udviklet med Node.js, TypeScript og React.
+      - Deployment på Kubernetes cluster.
+references:
+  - name: Niels Dahl
+    company: Digital Revisor
+    role: CEO & Founder
+    email: niels@digitalrevisor.nu
+    phone: "(+45) 24946652"
+  - name: Henrik Refslund
+    company: Digital Revisor
+    role: CTO
+    email: henrik@digitalrevisor.nu
+skills:
+  programming_languages:
+    - Python
+    - Node.js
+    - TypeScript
+    - Go
+    - Java
+    - SQL
+  frameworks:
+    - Flask
+    - Express
+    - React
+    - Vue.js
+    - Sass
+    - div. CSS frameworks
+  tools:
+    - Git
+    - Docker
+    - Kubernetes
+    - Bash
+    - div. CI/CD værktøjer

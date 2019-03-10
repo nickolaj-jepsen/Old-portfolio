@@ -19,7 +19,6 @@ const BackLink = styled(Link)`
 `;
 
 const BlogPost = ({ data, pageContext }) => {
-  console.log(data, pageContext);
   const post = data.markdownRemark;
   const { title } = data.markdownRemark.frontmatter;
   const { previous, next } = pageContext;
@@ -45,7 +44,7 @@ BlogPost.propTypes = {
     prev: PropTypes.object,
   }),
   data: PropTypes.shape({
-    mdx: PropTypes.object.isRequired,
+    markdownRemark: PropTypes.object.isRequired,
   }).isRequired,
 };
 

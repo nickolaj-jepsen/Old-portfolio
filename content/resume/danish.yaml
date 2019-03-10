@@ -99,14 +99,14 @@ projects:
       - Har brugt TDD, samt CI for at sikre mindst mulig fejl.
       - Udviklet med Node.js, Express og MongoDB.
   - name: LoLVRSpectate
-    role: Hovedudvikle
+    role: Hovedudvikler
     client: ~
     link: /fire-proof/LoLVRSpectate
     highlights:
       - Udviklede et værktøj til at tilføje uofficiel VR support til spillet League of Legends.
       - Udviklet med Python, samt VR framework OpenVR til at spore bevægelserne fra VR headsettet.
   - name: Digital Signature
-    role: Hovedudvikle
+    role: Hovedudvikler
     client: Digital Revisor
     link: ~
     highlights:

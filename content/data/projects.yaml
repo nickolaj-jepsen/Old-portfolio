@@ -1,5 +1,6 @@
 - name: LoLVRSpectate
   language: Python
+  open_source: true
   link: https://github.com/Fire-Proof/LoLVRSpectate
   tools:
     - OpenVR
@@ -13,6 +14,7 @@
 
 - name: AudiobookShelf
   language: TypeScript
+  open_source: true
   link: https://github.com/Fire-Proof/AudiobookShelf
   tools:
     - express
@@ -22,6 +24,7 @@
 
 - name: cue-csgo
   language: Python
+  open_source: true
   link: https://github.com/Fire-Proof/cue-csgo
   tools:
     - Flask
@@ -32,6 +35,7 @@
 
 - name: Pay2Ban
   language: Python
+  open_source: true
   link: https://github.com/Fire-Proof/Pay2Ban
   tools:
     - Flask
@@ -45,6 +49,7 @@
 
 - name: Portfolio Site
   language: JavaScript
+  open_source: true
   link: https://github.com/Fire-Proof/portfolio
   tools:
     - Gatsby

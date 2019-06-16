@@ -88,6 +88,15 @@ experience:
       to: Feb. 2019
     highlights:
       - En tidsbegrænset ansættelse for at hjælpe med at færdigøre digital selvetjenings værktøj.
+  - name: BilligVVS.dk
+    role: Udvikler
+    location: Aarhus
+    date:
+      from: Maj. 2019
+      to: Nu
+    highlights:
+      - Vidreudvikling af, samt vedligeholdelse af en Django baseret webshop.
+      - Udvikling af interaktive frontend elementer via TypeScript og React.
 projects:
   - name: Redskabstyring
     role: Udvikler
@@ -105,15 +114,6 @@ projects:
     highlights:
       - Udviklede et værktøj til at tilføje uofficiel VR support til spillet League of Legends.
       - Udviklet med Python, samt VR framework OpenVR til at spore bevægelserne fra VR headsettet.
-  - name: Digital Signature
-    role: Hovedudvikler
-    client: Digital Revisor
-    link: ~
-    highlights:
-      - Udviklede en micro-service i samarbejde med Digital Revisor, der håndterede forbindelsen til digital-signatur servicen Penneo.
-      - Brugt agil metodik i form at scrum til at løbende tilpasse produktet til brugernes krav.
-      - Udviklet med Node.js, TypeScript og React.
-      - Deployment på Kubernetes cluster.
 references:
   - name: Niels Dahl
     company: Digital Revisor
